@@ -1,124 +1,88 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const html = document.documentElement;
-const darkModeToggle = document.querySelector("#darkModeToggle");
-const toggleDark = document.querySelector("#toggledark");
+const darkModeToggle = document.getElementById("darkModeToggle");
+const toggledark = document.getElementById("toggledark");
 
-function updateThemeButtons() {
-    const isDark = html.classList.contains("dark");
+function updateTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
 
-    darkModeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
-    toggleDark.textContent = isDark ? "☀ Light Theme" : "🌙 Dark Theme";
+    darkModeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    toggledark.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+
+    darkModeToggle.setAttribute("aria-pressed", isDark);
+    toggledark.setAttribute("aria-pressed", isDark);
 }
 
 function toggleTheme() {
-    html.classList.toggle("dark");
-    updateThemeButtons();
+    document.documentElement.classList.toggle("dark");
+    updateTheme();
 }
-<button id="darkModeToggle" type="button">Dark Mode</button>
 
-updateThemeButtons();
+darkModeToggle.addEventListener("click", toggleTheme);
+toggledark.addEventListener("click", toggleTheme);
 
+updateTheme();
 
 const introTimeline = gsap.timeline({
-    paused: true,
     defaults: {
-        duration: 0.7,
+        duration: 1,
         ease: "power3.out"
     }
 });
 
 introTimeline
-    .from(".hero-item", {
-        y: 45,
-        opacity: 0,
-        stagger: 0.18
+    .from("#hero h1", {
+        y: 60,
+        opacity: 0
     })
-    .from("nav", {
-        y: -25,
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.out"
-
-    }, "-=0.4")
-    .from("#replayBtn", {
+    .from("#hero p", {
+        y: 30,
+        opacity: 0
+    }, "-=0.5")
+    .from("#hero img", {
         scale: 0.8,
-        opacity: 0,
-        ease: "back.out(1.5)"
+        opacity: 0
+    }, "-=0.5");
 
-    }, "-=0.3");
 
-introTimeline.play();
 
-document.querySelector("#replayBtn").addEventListener("click", () => {
     introTimeline.restart();
+
+gsap.utils.toArray(".reveal").forEach((section) => {
+    gsap.from(section, {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+
+        scrollTrigger: {
+            trigger: section,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        }
+    });
 });
 
-const media = gsap.matchMedia();
 
-media.add(
-    {
-        reduceMotion: "(prefers-reduced-motion: reduce)",
-        normalMotion: "(prefers-reduced-motion: no-preference)"
-    },
-    (context) => {
-        const { reduceMotion, normalMotion } = context.conditions;
+gsap.to("#progressBar", {
+    scaleX: 1,
+    ease: "none",
 
-        if (reduceMotion) {
-            gsap.set(".reveal", {
-                autoAlpha: 1,
-                clearProps: "transform"
-            });
-
-            gsap.set("#progressBar", {
-                scaleX: 1
-            });
-
-            return;
-        }
-
-        if (normalMotion) {
-
-            gsap.utils.toArray(".reveal").forEach((section) => {
-                gsap.fromTo(
-                    section,
-                    {
-                        y: 40,
-                        autoAlpha: 0
-                    },
-                    {
-                        y: 0,
-                        autoAlpha: 1,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: section,
-                            start: "top 85%",
-                            toggleActions: "play none none reverse"
-                        }
-                    }
-                );
-            });
-
-            gsap.to("#progressBar", {
-                scaleX: 1,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: document.documentElement,
-                    start: "top top",
-                    end: "bottom bottom",
-                    scrub: 0.3
-                }
-            });
-        }
+    scrollTrigger: {
+        trigger: document.documentElement,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1
     }
-);
+});
 
-document.querySelector("#contactForm").addEventListener("submit", (event) => {
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    document.querySelector("#formStatus").textContent =
-        "Thank you! Your inquiry has been recorded in this demo.";
+    document.getElementById("formStatus").textContent =
+        "Thank you! Your inquiry has been received.";
 
-    event.target.reset();
+    contactForm.reset();
 });

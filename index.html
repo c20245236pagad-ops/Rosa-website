@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosa Dress Design | Elegance in Every Dress</title>
 
+    <title>Rosa Dress Design | Elegance in Every Dress</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
@@ -57,10 +57,6 @@
             z-index: 9999;
         }
 
-        .reveal {
-            visibility: visible;
-        }
-
         button, a {
             -webkit-tap-highlight-color: transparent;
         }
@@ -79,31 +75,24 @@
         <nav class="mx-auto flex max-w-7xl flex-wrap items-center
                     justify-between gap-4 px-6 py-5">
 
-            <a href="#hero" class="text-2xl font-black tracking-widest
-                                  text-[#781d36] dark:text-[#e8a0ad]">
+            <a href="#hero"
+               class="text-2xl font-black tracking-widest
+                      text-[#781d36] dark:text-[#e8a0ad]">
                 ROSA<span class="text-[#e8a0ad]">.</span>
             </a>
 
             <ul class="flex flex-wrap gap-5 text-sm font-semibold md:gap-8">
-                <li><a href="#hero" class="hover:text-[#781d36] dark:hover:text-[#e8a0ad]">Home</a></li>
-                <li><a href="#about" class="hover:text-[#781d36] dark:hover:text-[#e8a0ad]">About</a></li>
-                <li><a href="#collection" class="hover:text-[#781d36] dark:hover:text-[#e8a0ad]">Collection</a></li>
-                <li><a href="#contact" class="hover:text-[#781d36] dark:hover:text-[#e8a0ad]">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="darkModeToggle" type="button"
+                class="btn bg-[#781d36] text-white hover:bg-[#5c1529]"
+                aria-pressed="false">
+                🌙 Dark Mode
+            </button>
 
-            <div class="flex flex-wrap gap-2">
-                <button id="darkModeToggle" type="button"
-                    class="btn bg-[#781d36] text-white hover:bg-[#5c1529]">
-                    Light Mode
-                </button>
-
-                <button id="toggledark" type="button"
-                    class="btn border border-[#781d36] text-[#781d36]
-                           hover:bg-[#e8a0ad]/30
-                           dark:border-[#e8a0ad] dark:text-[#e8a0ad]">
-                    Toggle Dark
-                </button>
-            </div>
         </nav>
     </header>
 
@@ -120,91 +109,119 @@
                     Timeless Elegance · Modern Romance
                 </p>
 
-                <h1 class="text-5xl font-black leading-tight md:text-7xl">
+                <h1 id="heroTitle"
+                    class="text-5xl font-black leading-tight md:text-7xl">
+
                     Every Dress
+
                     <span class="block font-serif italic text-[#c76f87]
                                  dark:text-[#e8a0ad]">
                         Tells a Story.
                     </span>
+
                 </h1>
 
-                <p class="mt-6 max-w-lg text-lg leading-8 opacity-80">
+                <p id="heroText"
+                    class="mt-6 max-w-lg text-lg leading-8 opacity-80">
+
                     Welcome to Rosa Dress Design, where graceful silhouettes,
                     beautiful fabrics, and thoughtful details bring your dream
                     dress to life.
+
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-4">
+
                     <a href="#collection"
-                        class="btn bg-[#781d36] text-white hover:bg-[#5c1529]">
+                       class="btn bg-[#781d36] text-white hover:bg-[#5c1529]">
                         Explore Collection
                     </a>
 
                     <a href="#contact"
-                        class="btn border border-[#781d36] text-[#781d36]
-                               hover:bg-[#e8a0ad]/30
-                               dark:border-[#e8a0ad] dark:text-[#e8a0ad]">
+                       class="btn border border-[#781d36] text-[#781d36]
+                              hover:bg-[#e8a0ad]/30
+                              dark:border-[#e8a0ad] dark:text-[#e8a0ad]">
                         Custom Designs
                     </a>
+
                 </div>
 
+                <!-- REPLAY BUTTON -->
                 <button id="replayBtn" type="button"
-                    class="mt-6 text-sm font-bold underline decoration-[#e8a0ad]
-                           underline-offset-4">
+                    class="mt-6 text-sm font-bold underline
+                           decoration-[#e8a0ad] underline-offset-4">
                     ↻ Replay Intro
                 </button>
+
             </div>
+
+            <!-- HERO IMAGE -->
             <div class="hero-item order-1 md:order-2">
-                <div class="overflow-hidden rounded-t-[45%] rounded-b-3xl
-                            border-8 border-white/60 shadow-2xl
-                            dark:border-[#e8a0ad]/20">
+
+                <div class="overflow-hidden rounded-t-[45%]
+                            rounded-b-3xl border-8 border-white/60
+                            shadow-2xl dark:border-[#e8a0ad]/20">
+
                     <img
-                        src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1000&q=85"
-                        alt="Elegant rose-colored evening dress"
+                        src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=1200&q=85"
+                        alt="Elegant pink dress"
                         class="h-[420px] w-full object-cover md:h-[600px]">
+
                 </div>
+
                 <p class="mt-4 text-center text-sm italic opacity-70">
                     Made with love. Designed for you.
                 </p>
-            </div>
-        </section>
 
+            </div>
+
+        </section>
         <section class="bg-[#e8a0ad] px-6 py-12 text-[#421c2a]">
-            <div class="mx-auto grid max-w-7xl gap-8 text-center md:grid-cols-3">
+
+            <div class="mx-auto grid max-w-7xl gap-8
+                        text-center md:grid-cols-3">
 
                 <div class="reveal">
                     <p class="mb-2 text-3xl">✿</p>
                     <h3 class="text-xl font-bold">Elegant Designs</h3>
-                    <p class="mt-2">Beautiful styles for unforgettable moments.</p>
+                    <p class="mt-2">
+                        Beautiful styles for unforgettable moments.
+                    </p>
                 </div>
 
                 <div class="reveal">
                     <p class="mb-2 text-3xl">♡</p>
                     <h3 class="text-xl font-bold">Made for You</h3>
-                    <p class="mt-2">Personal touches that reflect your style.</p>
+                    <p class="mt-2">
+                        Personal touches that reflect your style.
+                    </p>
                 </div>
 
                 <div class="reveal">
                     <p class="mb-2 text-3xl">✧</p>
                     <h3 class="text-xl font-bold">Timeless Beauty</h3>
-                    <p class="mt-2">Romantic silhouettes that never go out of style.</p>
+                    <p class="mt-2">
+                        Romantic silhouettes that never go out of style.
+                    </p>
                 </div>
 
             </div>
         </section>
 
         <section id="about"
-            class="reveal mx-auto grid max-w-7xl items-center gap-12
-                   px-6 py-24 md:grid-cols-2">
+            class="reveal mx-auto grid max-w-7xl items-center
+                   gap-12 px-6 py-24 md:grid-cols-2">
 
             <div>
                 <img
                     src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85"
-                    alt="Fashion garments and elegant clothing"
-                    class="h-[420px] w-full rounded-3xl object-cover shadow-xl">
+                    alt="Elegant fashion clothing"
+                    class="h-[420px] w-full rounded-3xl
+                           object-cover shadow-xl">
             </div>
 
             <div>
+
                 <p class="mb-3 font-bold uppercase tracking-[0.3em]
                           text-[#781d36] dark:text-[#e8a0ad]">
                     Our Story
@@ -228,9 +245,10 @@
                 </p>
 
                 <a href="#contact"
-                    class="btn mt-8 bg-[#781d36] text-white hover:bg-[#5c1529]">
+                   class="btn mt-8 bg-[#781d36] text-white hover:bg-[#5c1529]">
                     Discover Rosa
                 </a>
+
             </div>
         </section>
 
@@ -240,6 +258,7 @@
             <div class="mx-auto max-w-7xl">
 
                 <div class="mb-12 text-center">
+
                     <p class="mb-3 font-bold uppercase tracking-[0.3em]
                               text-[#781d36] dark:text-[#e8a0ad]">
                         The Rosa Edit
@@ -253,147 +272,202 @@
                         Discover styles for celebrations, special occasions,
                         and moments worth remembering.
                     </p>
+
                 </div>
 
                 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
                     <article class="dress-card">
+
                         <img
                             src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85"
                             alt="Elegant evening dress"
                             class="h-96 w-full object-cover">
 
                         <div class="p-6">
+
                             <p class="text-sm uppercase tracking-widest
                                       text-[#a85a70] dark:text-[#e8a0ad]">
                                 Collection 01
                             </p>
+
                             <h3 class="mt-2 text-2xl font-bold font-serif">
                                 The Rose Evening
                             </h3>
+
                             <p class="mt-3 leading-7 opacity-75">
                                 A graceful look for dinners, celebrations,
                                 and unforgettable evenings.
                             </p>
+
                             <a href="#contact"
-                                class="mt-5 inline-block font-bold text-[#781d36]
-                                       hover:underline dark:text-[#e8a0ad]">
+                               class="mt-5 inline-block font-bold
+                                      text-[#781d36] hover:underline
+                                      dark:text-[#e8a0ad]">
                                 Inquire About This Dress →
                             </a>
+
                         </div>
                     </article>
 
                     <article class="dress-card">
+
                         <img
                             src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=85"
                             alt="Fashionable formal dress"
                             class="h-96 w-full object-cover">
 
                         <div class="p-6">
+
                             <p class="text-sm uppercase tracking-widest
                                       text-[#a85a70] dark:text-[#e8a0ad]">
                                 Collection 02
                             </p>
+
                             <h3 class="mt-2 text-2xl font-bold font-serif">
                                 The Blush Classic
                             </h3>
+
                             <p class="mt-3 leading-7 opacity-75">
                                 Soft romantic style with a modern and
                                 feminine silhouette.
                             </p>
+
                             <a href="#contact"
-                                class="mt-5 inline-block font-bold text-[#781d36]
-                                       hover:underline dark:text-[#e8a0ad]">
+                               class="mt-5 inline-block font-bold
+                                      text-[#781d36] hover:underline
+                                      dark:text-[#e8a0ad]">
                                 Inquire About This Dress →
                             </a>
+
                         </div>
                     </article>
-
                     <article class="dress-card">
+
                         <img
                             src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=85"
-                            alt="Contemporary fashion inspiration"
+                            alt="Contemporary fashion style"
                             class="h-96 w-full object-cover">
 
                         <div class="p-6">
+
                             <p class="text-sm uppercase tracking-widest
                                       text-[#a85a70] dark:text-[#e8a0ad]">
                                 Collection 03
                             </p>
+
                             <h3 class="mt-2 text-2xl font-bold font-serif">
                                 The Modern Muse
                             </h3>
+
                             <p class="mt-3 leading-7 opacity-75">
                                 A confident, contemporary look for your
                                 most stylish moments.
                             </p>
+
                             <a href="#contact"
-                                class="mt-5 inline-block font-bold text-[#781d36]
-                                       hover:underline dark:text-[#e8a0ad]">
+                               class="mt-5 inline-block font-bold
+                                      text-[#781d36] hover:underline
+                                      dark:text-[#e8a0ad]">
                                 Inquire About This Dress →
                             </a>
+
                         </div>
                     </article>
 
                 </div>
             </div>
         </section>
+
         <section class="reveal mx-auto max-w-7xl px-6 py-20">
 
             <div class="text-center">
+
                 <p class="font-bold uppercase tracking-[0.3em]
                           text-[#781d36] dark:text-[#e8a0ad]">
                     Our Visual Identity
                 </p>
+
                 <h2 class="section-title mt-3 font-serif">
                 </h2>
+
                 <p class="mx-auto max-w-2xl opacity-75">
                     A balanced color palette creates a soft, romantic,
                     and luxurious boutique experience.
                 </p>
+
             </div>
 
             <div class="mt-10 grid gap-5 md:grid-cols-3">
 
-                <div class="overflow-hidden rounded-2xl border border-[#e8a0ad]/30">
+                <div class="overflow-hidden rounded-2xl
+                            border border-[#e8a0ad]/30">
+
                     <div class="h-36 bg-[#fff1f2]"></div>
+
                     <div class="p-5">
                         <p class="text-3xl font-black"></p>
+
                         <h3 class="mt-2 font-bold">Blush Pink</h3>
-                        <p class="mt-1 text-sm opacity-75">#FFF1F2</p>
-                        <p class="mt-2 text-sm">Main background and open spaces.</p>
+
+                        <p class="mt-1 text-sm opacity-75">
+                        </p>
+
+                        <p class="mt-2 text-sm">
+                            Dominant color for backgrounds and open spaces.
+                        </p>
                     </div>
+
                 </div>
 
-                <div class="overflow-hidden rounded-2xl border border-[#e8a0ad]/30">
+                <div class="overflow-hidden rounded-2xl
+                            border border-[#e8a0ad]/30">
+
                     <div class="h-36 bg-[#e8a0ad]"></div>
-                    <div class="p-5">
-                        <p class="text-3xl font-black"></p>
-                        <h3 class="mt-2 font-bold">Rose Pink</h3>
-                        <p class="mt-1 text-sm opacity-75">#E8A0AD</p>
-                        <p class="mt-2 text-sm">Feature sections and soft accents.</p>
-                    </div>
-                </div>
 
-                <div class="overflow-hidden rounded-2xl border border-[#e8a0ad]/30">
-                    <div class="h-36 bg-[#781d36]"></div>
                     <div class="p-5">
                         <p class="text-3xl font-black"></p>
-                        <h3 class="mt-2 font-bold">Burgundy</h3>
-                        <p class="mt-1 text-sm opacity-75">#781D36</p>
-                        <p class="mt-2 text-sm">Buttons, links, and focal details.</p>
+
+                        <h3 class="mt-2 font-bold">Rose Pink</h3>
+
+                        <p class="mt-1 text-sm opacity-75">
+                        </p>
+
+                        <p class="mt-2 text-sm">
+                            Secondary color for feature sections and accents.
+                        </p>
                     </div>
+
+                </div>
+                <div class="overflow-hidden rounded-2xl
+                            border border-[#e8a0ad]/30">
+
+                    <div class="h-36 bg-[#781d36]"></div>
+
+                    <div class="p-5">
+                        <p class="text-3xl font-black"></p>
+
+                        <h3 class="mt-2 font-bold">Burgundy</h3>
+
+                        <p class="mt-1 text-sm opacity-75">
+                        </p>
+
+                        <p class="mt-2 text-sm">
+                            Accent color for buttons, links, and focal details.
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
         </section>
-
         <section id="contact"
             class="reveal bg-[#e8a0ad] px-6 py-24 text-[#421c2a]">
 
             <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
 
                 <div>
+
                     <p class="font-bold uppercase tracking-[0.3em]">
                         Let's Create Something Beautiful
                     </p>
@@ -410,75 +484,217 @@
                     <p class="mt-6 font-semibold">
                         ROSA DRESS DESIGN
                     </p>
-                    <p>Elegant styles. Beautiful moments.</p>
+
+                    <p>
+                        Elegant styles. Beautiful moments.
+                    </p>
+
                 </div>
 
                 <form id="contactForm"
-                    class="grid gap-5 rounded-3xl bg-[#fff1f2] p-7 shadow-xl">
+                    class="grid gap-5 rounded-3xl
+                           bg-[#fff1f2] p-7 shadow-xl">
 
                     <div>
-                        <label for="name" class="mb-2 block font-bold">Your Name</label>
-                        <input id="name" name="name" type="text" required
-                            class="w-full rounded-xl border border-[#e8a0ad]
-                                   bg-white px-4 py-3 text-[#421c2a]">
+                        <label for="name"
+                            class="mb-2 block font-bold">
+                            Your Name
+                        </label>
+
+                        <input id="name" name="name"
+                            type="text" required
+                            class="w-full rounded-xl border
+                                   border-[#e8a0ad] bg-white
+                                   px-4 py-3 text-[#421c2a]">
                     </div>
 
                     <div>
-                        <label for="email" class="mb-2 block font-bold">Email Address</label>
-                        <input id="email" name="email" type="email" required
-                            class="w-full rounded-xl border border-[#e8a0ad]
-                                   bg-white px-4 py-3 text-[#421c2a]">
+                        <label for="email"
+                            class="mb-2 block font-bold">
+                            Email Address
+                        </label>
+
+                        <input id="email" name="email"
+                            type="email" required
+                            class="w-full rounded-xl border
+                                   border-[#e8a0ad] bg-white
+                                   px-4 py-3 text-[#421c2a]">
                     </div>
 
                     <div>
-                        <label for="dress" class="mb-2 block font-bold">
+                        <label for="dress"
+                            class="mb-2 block font-bold">
                             Dress Interest
                         </label>
+
                         <select id="dress" name="dress"
-                            class="w-full rounded-xl border border-[#e8a0ad]
-                                   bg-white px-4 py-3 text-[#421c2a]">
+                            class="w-full rounded-xl border
+                                   border-[#e8a0ad] bg-white
+                                   px-4 py-3 text-[#421c2a]">
+
                             <option>Evening Dress</option>
                             <option>Party Dress</option>
                             <option>Custom Design</option>
                             <option>Other Inquiry</option>
+
                         </select>
                     </div>
 
                     <div>
-                        <label for="message" class="mb-2 block font-bold">Message</label>
-                        <textarea id="message" name="message" rows="4" required
-                            class="w-full rounded-xl border border-[#e8a0ad]
-                                   bg-white px-4 py-3 text-[#421c2a]"></textarea>
+                        <label for="message"
+                            class="mb-2 block font-bold">
+                            Message
+                        </label>
+
+                        <textarea id="message" name="message"
+                            rows="4" required
+                            class="w-full rounded-xl border
+                                   border-[#e8a0ad] bg-white
+                                   px-4 py-3 text-[#421c2a]"></textarea>
                     </div>
 
                     <button type="submit"
-                        class="btn bg-[#781d36] text-white hover:bg-[#5c1529]">
+                        class="btn bg-[#781d36] text-white
+                               hover:bg-[#5c1529]">
                         Send Inquiry ♡
                     </button>
 
-                    <p id="formStatus" aria-live="polite" class="text-sm font-semibold"></p>
+                    <p id="formStatus"
+                       aria-live="polite"
+                       class="text-sm font-semibold">
+                    </p>
+
                 </form>
+
             </div>
         </section>
-    </main>
 
-    <footer class="bg-[#fff1f2] px-6 py-8 text-center dark:bg-[#20161b]">
-        <a href="#hero" class="text-xl font-black tracking-widest text-[#781d36]
-                              dark:text-[#e8a0ad]">
+    </main>
+    <footer class="bg-[#fff1f2] px-6 py-8
+                   text-center dark:bg-[#20161b]">
+
+        <a href="#hero"
+           class="text-xl font-black tracking-widest
+                  text-[#781d36] dark:text-[#e8a0ad]">
             ROSA.
         </a>
+
         <p class="mt-3 text-sm opacity-70">
             © 2026 Rosa Dress Design. Elegance in Every Dress.
         </p>
-        <a href="#hero" class="mt-3 inline-block text-sm font-semibold
-                               hover:text-[#781d36] dark:hover:text-[#e8a0ad]">
-       
-        </a>
-    </footer>
 
+        <a href="#hero"
+           class="mt-3 inline-block text-sm font-semibold
+                  hover:text-[#781d36] dark:hover:text-[#e8a0ad]">
+        </a>
+
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const darkModeToggle =
+            document.getElementById("darkModeToggle");
+
+        darkModeToggle.addEventListener("click", function () {
+
+            document.documentElement.classList.toggle("dark");
+
+            const isDark =
+                document.documentElement.classList.contains("dark");
+
+            darkModeToggle.textContent = isDark
+                ? "☀️ Dark Mode"
+                : "🌙 Dark Mode";
+
+            darkModeToggle.setAttribute("aria-pressed", isDark);
+
+        });
+
+        const introTimeline = gsap.timeline({
+            defaults: {
+                duration: 1,
+                ease: "power3.out"
+            }
+        });
+
+        introTimeline
+
+            .from("#heroTitle", {
+                y: 60,
+                opacity: 0
+            })
+
+            .from("#heroText", {
+                y: 30,
+                opacity: 0
+            }, "-=0.5")
+
+            .from("#hero img", {
+                scale: 0.8,
+                opacity: 0
+            }, "-=0.5");
+
+        document.getElementById("replayBtn")
+            .addEventListener("click", function () {
+
+                introTimeline.restart();
+
+            });
+
+        gsap.utils.toArray(".reveal").forEach(function (section) {
+
+            gsap.from(section, {
+
+                y: 60,
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
+
+                scrollTrigger: {
+
+                    trigger: section,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+
+                }
+
+            });
+
+        });
+
+        gsap.to("#progressBar", {
+
+            scaleX: 1,
+            ease: "none",
+
+            scrollTrigger: {
+
+                trigger: document.documentElement,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+
+            }
+
+        });
+
+        document.getElementById("contactForm")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                document.getElementById("formStatus").textContent =
+                    "Thank you! Your inquiry has been received.";
+
+                this.reset();
+
+            });
+
+    </script>
 
 </body>
 </html>
